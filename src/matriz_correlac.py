@@ -1,2 +1,2 @@
 def teste ():
-    print("teste\n")
+    print("teste 2\n")
