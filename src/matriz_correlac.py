@@ -1,2 +1,4 @@
-def teste ():
-    print("teste 2\n")
+def teste() :
+    print("deu bom")
+
+# def plotCor(X, y)
