@@ -5,22 +5,20 @@
 import src.classificador as classf
 import pandas as pd
 import numpy as np
-data = pd.read_csv('dataset/banco.csv')
-data= data.drop("CHAVE",axis=1)
+data = pd.read_csv('dataset/banco_de_rosas.csv')
+# data= data.drop("CHAVE",axis=1)
+# print(data.head())
+classe = data["variety"]
+# print(classe)
+feature = data.drop("variety",axis=1)
+print(feature)
+# print("\n\n\n%%%%%%%%%%%%%%%%%%%%%%%%\n\n\n")
+classes_np=classe.to_numpy()
+features_np=feature.to_numpy()
 
-print(data.head())
-
-print("\n\n\n%%%%%%%%%%%%%%%%%%%%%%%%\n\n\n")
-
-#x= data.columns
-#print(x)
-#print(type(x))
-
-pdtonp=data.to_numpy()
-x=pdtonp[0:,0:7]
-#print(x)
-#print("\n\n\n%%%%%%%%%%%%%%%%%%%%%%%%\n\n\n")
-
-y=pdtonp[:,7]
-#print(y)
-classf.classificadador_MPL(x,y,data) 
+# print(features_np)
+# # print(type(features_np))
+# print("\n\n\n%%%%%%%%%%%%%%%%%%%%%%%%\n\n\n")
+# print(classes_np)
+# print(type(features_np))
+classf.classificadador_MPL(features_np,classes_np)
