@@ -20,13 +20,9 @@ def classificadador_MPL(x,y) :
         power_t=0.5, max_iter=10000, shuffle=True, random_state=None, tol=0.0001, verbose=False, 
         warm_start=False, momentum=0.9, nesterovs_momentum=True, early_stopping=False, 
         validation_fraction=0.1, beta_1=0.9, beta_2=0.999, epsilon=1e-08, n_iter_no_change=10, max_fun=15000)
-
+# cross validation
     print(clf.fit(x,y))
     print("Score treino:",clf.score(X_train,y_train))
     print("Score teste:",clf.score(X_test,y_test))
-    # print(len(X_train), 'train examples')
-    # print(len(train), 'train examples')   
-#predic ou score ->
-# tenho que separar o banco de dados que eu tenho em teste e treino, antes de usar a predict ou o score dá uma sacada aqui nesse site https://www.tensorflow.org/tutorials/structured_data/feature_columns
-# procure saber o que é o predict e o score, e como fatiar facilmente um banco de dados para treino.
+#predic ou score
 
