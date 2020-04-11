@@ -6,15 +6,8 @@ from sklearn.model_selection import train_test_split
 
 
 def classificadador_MPL(x,y) :
-    # train, test = train_test_split(dataframe, test_size=0.3)
-    # #train, val = train_test_split(train, test_size=0.2)
-    # print(len(train), 'train examples')
-    # #print(len(val), 'validation examples')
-    # print(len(test), 'test examples')
-    # # print("TESTE")
 
     X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.3, random_state=None,shuffle=0)
-    # clf = MLPClassifier(solver='lbfgs', alpha=1e-5,hidden_layer_sizes=(5, 2), random_state=1)
     clf = MLPClassifier(hidden_layer_sizes=(100, 80), activation='relu', solver='adam', 
         alpha=0.0001, batch_size='auto', learning_rate='constant', learning_rate_init=0.001, 
         power_t=0.5, max_iter=10000, shuffle=True, random_state=None, tol=0.0001, verbose=False, 
